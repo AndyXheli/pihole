@@ -126,6 +126,7 @@ dmd.metaservices.microsoft.com^
 
 
 #Apple
+mask.icloud.com
 
 #Apple Music
 itunes.apple.com
