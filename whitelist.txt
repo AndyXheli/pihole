@@ -37,92 +37,190 @@ dl.google.com
 redirector.gvt1.com
 
 
-#Microsoft (Windows, Office, Skype, etc)
+# ---- Outlook & Email ----
+outlook.office.com                         # Outlook web access
+*.outlook.office.com                       # Includes mail, calendar, etc.
+outlook.office365.com                      # Legacy Outlook 365 domain
+*.outlook.com                              # General Outlook subdomains
+smtp.office365.com                         # SMTP email sending
+r1.res.office365.com                       # Rendering/static resources
+r3.res.office365.com
+r4.res.office365.com
+attachments.office.net                     # Outlook attachment viewer
 
-#Windows uses this to verify connectivity to Internet
-www.msftncsi.com 
-www.msftconnecttest.com
+# ---- Email Protection & Filtering ----
+*.protection.outlook.com                   # Email threat protection
+*.mail.protection.outlook.com              # Exchange Online Protection
 
-#Microsoft Web Pages (Outlook, Office365, Live, Microsoft.com...)
-outlook.office365.com 
-products.office.com 
-c.s-microsoft.com 
-i.s-microsoft.com 
-login.live.com 
-login.microsoftonline.com 
+# ---- OneDrive Storage ----
+storage.live.com                           # Core OneDrive data
+admin.onedrive.com                         # Admin panel
+*.users.storage.live.com                   # User-specific OneDrive access
 
-#Backup bitlocker recovery key to Microsoft account
-g.live.com
+# ---- SharePoint Online ----
+*.sharepointonline.com                     # SharePoint site access
+cdn.sharepointonline.com                   # CDN for SharePoint
+privatecdn.sharepointonline.com
+publiccdn.sharepointonline.com
+static.sharepointonline.com
+spoprod-a.akamaihd.net                     # Akamai CDN for SharePoint assets
 
-#Microsoft Store (Windows Store)
-dl.delivery.mp.microsoft.com 
-geo-prod.do.dsp.mp.microsoft.com 
-displaycatalog.mp.microsoft.com
+# ---- Teams & Skype for Business ----
+teams.microsoft.com                        # Microsoft Teams core
+*.teams.microsoft.com
+*.lync.com                                  # Legacy Skype for Business
+broadcast.skype.com                        # Live video broadcast
+*.broadcast.skype.com
+*.sfbassets.com
+*.urlp.sfbassets.com
+*.skype.com                                 # Skype services
+*.skypeforbusiness.com
+s.gateway.messenger.live.com               # Skype messaging
+client-s.gateway.messenger.live.com
+ui.skype.com
+pricelist.skype.com
+apps.skype.com
+m.hotmail.com
 
-#Windows 10 Update
-sls.update.microsoft.com.akadns.net 
-fe3.delivery.dsp.mp.microsoft.com.nsatc.net 
-tlu.dl.delivery.mp.microsoft.com
+# ---- Streaming & Video ----
+*.keydelivery.mediaservices.windows.net    # DRM services
+*.msecnd.net                                # Microsoft CDN
+*.streaming.mediaservices.windows.net
+*.api.microsoftstream.com
+*.notification.api.microsoftstream.com
+api.microsoftstream.com
+web.microsoftstream.com
+*.azureedge.net
+*.media.azure.net
 
-#Microsoft Edge Browser Update
-msedge.api.cdp.microsoft.com
-
-#Skype
-s.gateway.messenger.live.com 
-client-s.gateway.messenger.live.com 
-ui.skype.com pricelist.skype.com 
-apps.skype.com 
-m.hotmail.com 
-sa.symcb.com 
-s{1..5}.symcb.com 
-
-#Microsoft Office
+# ---- Office Web Apps ----
+*.officeapps.live.com                      # Excel, Word, PowerPoint Online
+*.online.office.com
+office.live.com
+*.onenote.com
+*.office.net
+*cdn.onenote.net
+products.office.com
 officeclient.microsoft.com
 
-#Bing Maps Platform
-dev.virtualearth.net 
-ecn.dev.virtualearth.net 
-t0.ssl.ak.dynamic.tiles.virtualearth.net 
+# ---- Static & CDN Resources ----
+ajax.aspnetcdn.com                         # Microsoft ASP.NET CDN
+mlccdn.blob.core.windows.net
+aka.ms                                      # Microsoft short links
+amp.azure.net
+*.msedge.net
+compass-ssl.microsoft.com
+c.s-microsoft.com
+i.s-microsoft.com
+
+# ---- Identity & Authentication ----
+*.msftidentity.com
+*.msidentity.com
+account.activedirectory.windowsazure.com
+accounts.accesscontrol.windows.net
+login.microsoftonline.com                  # Core login domain
+login.live.com
+login.microsoft.com
+login.windows.net
+loginex.microsoftonline.com
+login-us.microsoftonline.com
+login.microsoftonline-p.com
+logincert.microsoftonline.com
+logincdn.msauth.net
+main.iam.ad.ext.azure.com
+passwordreset.microsoftonline.com
+api.passwordreset.microsoftonline.com
+provisioningapi.microsoftonline.com
+autologon.microsoftazuread-sso.com
+graph.microsoft.com
+graph.windows.net
+adminwebservice.microsoftonline.com
+becws.microsoftonline.com
+clientconfig.microsoftonline-p.net
+companymanager.microsoftonline.com
+device.login.microsoftonline.com
+nexus.microsoftonline-p.com
+
+# ---- Admin & Security Portals ----
+*.manage.office.com
+*.protection.office.com
+*.portal.cloudappsecurity.com
+manage.office.com
+protection.office.com
+
+# ---- Office 365 Dashboards ----
+account.office.net
+admin.microsoft.com
+home.office.com
+portal.office.com
+www.office.com
+suite.office.net
+
+# ---- Windows Connectivity Test ----
+www.msftncsi.com                           # Internet connectivity check
+www.msftconnecttest.com
+
+# ---- BitLocker & Device Management ----
+g.live.com                                 # BitLocker recovery key backup
+
+# ---- Microsoft Store & Windows Updates ----
+dl.delivery.mp.microsoft.com              # MS Store download service
+geo-prod.do.dsp.mp.microsoft.com
+displaycatalog.mp.microsoft.com
+sls.update.microsoft.com.akadns.net
+fe3.delivery.dsp.mp.microsoft.com.nsatc.net
+tlu.dl.delivery.mp.microsoft.com
+ctldl.windowsupdate.com
+
+# ---- Edge Browser Update ----
+msedge.api.cdp.microsoft.com
+
+# ---- Bing Maps Platform ----
+dev.virtualearth.net
+ecn.dev.virtualearth.net
+t0.ssl.ak.dynamic.tiles.virtualearth.net
 t0.ssl.ak.tiles.virtualearth.net
 
-#Xbox
+# ---- Xbox Live & Services ----
+clientconfig.passport.net
+device.auth.xboxlive.com
+xsts.auth.xboxlive.com
+title.auth.xboxlive.com
+title.mgt.xboxlive.com
+attestation.xboxlive.com
+xboxexperiencesprod.experimentation.xboxlive.com
+xflight.xboxlive.com
+cert.mgt.xboxlive.com
+xkms.xboxlive.com
+def-vef.xboxlive.com
+notify.xboxlive.com
+help.ui.xboxlive.com
+licensing.xboxlive.com
+eds.xboxlive.com
+www.xboxlive.com
+xbox.ipv6.microsoft.com
 
-#Xbox Live
-clientconfig.passport.net 
-#Xbox Live Achievements (confirmed by Microsoft)
+# ---- Xbox Analytics & Events ----
 v10.events.data.microsoft.com
 v20.events.data.microsoft.com
+v10.vortex-win.data.microsoft.com
+settings-win.data.microsoft.com
 
-#Xbox Live Messaging
-client-s.gateway.messenger.live.com
+# ---- Xbox Game Catalog ----
+catalog.gamepass.com
+go.microsoft.com
+dmd.metaservices.microsoft.com
 
-#Store App on Series X/S
+# ---- Xbox Store ----
 arc.msn.com
 
-#Full Functionality
-xbox.ipv6.microsoft.com 
-device.auth.xboxlive.com 
-www.msftncsi.com 
-title.mgt.xboxlive.com 
-xsts.auth.xboxlive.com 
-title.auth.xboxlive.com 
-ctldl.windowsupdate.com 
-attestation.xboxlive.com 
-xboxexperiencesprod.experimentation.xboxlive.com 
-xflight.xboxlive.com 
-cert.mgt.xboxlive.com 
-xkms.xboxlive.com 
-def-vef.xboxlive.com 
-notify.xboxlive.com 
-help.ui.xboxlive.com 
-licensing.xboxlive.com 
-eds.xboxlive.com 
-www.xboxlive.com 
-v10.vortex-win.data.microsoft.com 
-settings-win.data.microsoft.com
-catalog.gamepass.com^
-go.microsoft.com^
-dmd.metaservices.microsoft.com^
+# ---- Certificate Authorities (for Skype & others) ----
+sa.symcb.com
+s1.symcb.com
+s2.symcb.com
+s3.symcb.com
+s4.symcb.com
+s5.symcb.com
 
 
 #Apple
