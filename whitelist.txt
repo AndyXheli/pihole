@@ -83,23 +83,23 @@ broadcast.skype.com                        # Live video broadcast
 (\.|^)m\.hotmail\.com$
 
 # ---- Streaming & Video ----
-(\.|^)keydelivery\.mediaservices\.windows\.net$    # DRM services
-(\.|^)msecnd\.net$                                # Microsoft CDN
-(\.|^)streaming\.mediaservices\.windows\.net$
-(\.|^)api\.microsoftstream\.com$
-(\.|^)notification\.api\.microsoftstream\.com$
-(\.|^)microsoftstream\.com$
-(\.|^)web\.microsoftstream\.com$
-(\.|^)azureedge\.net$
-(\.|^)media\.azure\.net$
+@@/REGEX/(\.|^)keydelivery\.mediaservices\.windows\.net$    # DRM services
+@@/REGEX/(\.|^)msecnd\.net$                                 # Microsoft CDN
+@@/REGEX/(\.|^)streaming\.mediaservices\.windows\.net$
+@@/REGEX/(\.|^)api\.microsoftstream\.com$
+@@/REGEX/(\.|^)notification\.api\.microsoftstream\.com$
+@@/REGEX/(\.|^)microsoftstream\.com$
+@@/REGEX/(\.|^)web\.microsoftstream\.com$
+@@/REGEX/(\.|^)azureedge\.net$
+@@/REGEX/(\.|^)media\.azure\.net$
 
 # ---- Office Web Apps ----
-(\.|^)office\.com$                                # All Office.com subdomains (Excel, Word, PowerPoint Online, etc)
-(\.|^)online\.office\.com$
+@@/REGEX/(\.|^)office\.com$                                # All Office.com subdomains (Excel, Word, PowerPoint Online, etc)
+@@/REGEX/(\.|^)online\.office\.com$
 office.live.com
-(\.|^)onenote\.com$
-(\.|^)office\.net$
-(\.|^)cdn\.onenote\.net$
+@@/REGEX/(\.|^)onenote\.com$
+@@/REGEX/(\.|^)office\.net$
+@@/REGEX/(\.|^)cdn\.onenote\.net$
 products.office.com
 officeclient.microsoft.com
 
@@ -108,14 +108,13 @@ ajax.aspnetcdn.com                         # Microsoft ASP.NET CDN
 mlccdn.blob.core.windows.net
 aka.ms                                      # Microsoft short links
 amp.azure.net
-(\.|^)msedge\.net$
+@@/REGEX/(\.|^)msedge\.net$
 compass-ssl.microsoft.com
 c.s-microsoft.com
 i.s-microsoft.com
-
 # ---- Identity & Authentication ----
-(\.|^)msftidentity\.com$
-(\.|^)msidentity\.com$
+@@/REGEX/(\.|^)msftidentity\.com$
+@@/REGEX/(\.|^)msidentity\.com$
 account.activedirectory.windowsazure.com
 accounts.accesscontrol.windows.net
 login.microsoftonline.com                  # Core login domain
