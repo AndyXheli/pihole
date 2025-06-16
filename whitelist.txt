@@ -36,11 +36,12 @@ dl.google.com
 #Android TV
 redirector.gvt1.com
 
+
 # ---- Outlook & Email ----
 outlook.office.com                         # Outlook web access
-@@/REGEX/^([a-z0-9-]+\.)*outlook\.office\.com$/
+*.outlook.office.com                       # Includes mail, calendar, etc.
 outlook.office365.com                      # Legacy Outlook 365 domain
-@@/REGEX/^([a-z0-9-]+\.)*outlook\.com$/
+*.outlook.com                              # General Outlook subdomains
 smtp.office365.com                         # SMTP email sending
 r1.res.office365.com                       # Rendering/static resources
 r3.res.office365.com
@@ -48,16 +49,16 @@ r4.res.office365.com
 attachments.office.net                     # Outlook attachment viewer
 
 # ---- Email Protection & Filtering ----
-@@/REGEX/^([a-z0-9-]+\.)*protection\.outlook\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*mail\.protection\.outlook\.com$/
+*.protection.outlook.com                   # Email threat protection
+*.mail.protection.outlook.com              # Exchange Online Protection
 
 # ---- OneDrive Storage ----
 storage.live.com                           # Core OneDrive data
 admin.onedrive.com                         # Admin panel
-@@/REGEX/^([a-z0-9-]+\.)*users\.storage\.live\.com$/
+*.users.storage.live.com                   # User-specific OneDrive access
 
 # ---- SharePoint Online ----
-@@/REGEX/^([a-z0-9-]+\.)*sharepointonline\.com$/
+*.sharepointonline.com                     # SharePoint site access
 cdn.sharepointonline.com                   # CDN for SharePoint
 privatecdn.sharepointonline.com
 publiccdn.sharepointonline.com
@@ -66,14 +67,14 @@ spoprod-a.akamaihd.net                     # Akamai CDN for SharePoint assets
 
 # ---- Teams & Skype for Business ----
 teams.microsoft.com                        # Microsoft Teams core
-@@/REGEX/^([a-z0-9-]+\.)*teams\.microsoft\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*lync\.com$/
+*.teams.microsoft.com
+*.lync.com                                  # Legacy Skype for Business
 broadcast.skype.com                        # Live video broadcast
-@@/REGEX/^([a-z0-9-]+\.)*broadcast\.skype\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*sfbassets\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*urlp\.sfbassets\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*skype\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*skypeforbusiness\.com$/
+*.broadcast.skype.com
+*.sfbassets.com
+*.urlp.sfbassets.com
+*.skype.com                                 # Skype services
+*.skypeforbusiness.com
 s.gateway.messenger.live.com               # Skype messaging
 client-s.gateway.messenger.live.com
 ui.skype.com
@@ -82,42 +83,42 @@ apps.skype.com
 m.hotmail.com
 
 # ---- Streaming & Video ----
-@@/REGEX/^([a-z0-9-]+\.)*keydelivery\.mediaservices\.windows\.net$/
-@@/REGEX/^([a-z0-9-]+\.)*msecnd\.net$/
-@@/REGEX/^([a-z0-9-]+\.)*streaming\.mediaservices\.windows\.net$/
-@@/REGEX/^([a-z0-9-]+\.)*api\.microsoftstream\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*notification\.api\.microsoftstream\.com$/
+*.keydelivery.mediaservices.windows.net    # DRM services
+*.msecnd.net                                # Microsoft CDN
+*.streaming.mediaservices.windows.net
+*.api.microsoftstream.com
+*.notification.api.microsoftstream.com
 api.microsoftstream.com
 web.microsoftstream.com
-@@/REGEX/^([a-z0-9-]+\.)*azureedge\.net$/
-@@/REGEX/^([a-z0-9-]+\.)*media\.azure\.net$/
+*.azureedge.net
+*.media.azure.net
 
 # ---- Office Web Apps ----
-@@/REGEX/^([a-z0-9-]+\.)*officeapps\.live\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*online\.office\.com$/
+*.officeapps.live.com                      # Excel, Word, PowerPoint Online
+*.online.office.com
 office.live.com
-@@/REGEX/^([a-z0-9-]+\.)*onenote\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*office\.net$/
-@@/REGEX/^([a-z0-9-]+\.)*cdn\.onenote\.net$/
+*.onenote.com
+*.office.net
+*cdn.onenote.net
 products.office.com
 officeclient.microsoft.com
 
 # ---- Static & CDN Resources ----
-ajax.aspnetcdn.com
+ajax.aspnetcdn.com                         # Microsoft ASP.NET CDN
 mlccdn.blob.core.windows.net
-aka.ms
+aka.ms                                      # Microsoft short links
 amp.azure.net
-@@/REGEX/^([a-z0-9-]+\.)*msedge\.net$/
+*.msedge.net
 compass-ssl.microsoft.com
 c.s-microsoft.com
 i.s-microsoft.com
 
 # ---- Identity & Authentication ----
-@@/REGEX/^([a-z0-9-]+\.)*msftidentity\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*msidentity\.com$/
+*.msftidentity.com
+*.msidentity.com
 account.activedirectory.windowsazure.com
 accounts.accesscontrol.windows.net
-login.microsoftonline.com
+login.microsoftonline.com                  # Core login domain
 login.live.com
 login.microsoft.com
 login.windows.net
@@ -141,9 +142,9 @@ device.login.microsoftonline.com
 nexus.microsoftonline-p.com
 
 # ---- Admin & Security Portals ----
-@@/REGEX/^([a-z0-9-]+\.)*manage\.office\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*protection\.office\.com$/
-@@/REGEX/^([a-z0-9-]+\.)*portal\.cloudappsecurity\.com$/
+*.manage.office.com
+*.protection.office.com
+*.portal.cloudappsecurity.com
 manage.office.com
 protection.office.com
 
@@ -156,14 +157,14 @@ www.office.com
 suite.office.net
 
 # ---- Windows Connectivity Test ----
-www.msftncsi.com
+www.msftncsi.com                           # Internet connectivity check
 www.msftconnecttest.com
 
 # ---- BitLocker & Device Management ----
-g.live.com
+g.live.com                                 # BitLocker recovery key backup
 
 # ---- Microsoft Store & Windows Updates ----
-dl.delivery.mp.microsoft.com
+dl.delivery.mp.microsoft.com              # MS Store download service
 geo-prod.do.dsp.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 sls.update.microsoft.com.akadns.net
@@ -221,6 +222,7 @@ s3.symcb.com
 s4.symcb.com
 s5.symcb.com
 
+
 #Apple
 mask.icloud.com
 mask-h2.icloud.com
@@ -235,6 +237,7 @@ appleid.apple.com
 #iOS Weather App
 gsp-ssl.ls.apple.com
 gsp-ssl.ls-apple.com.akadns.net
+
 
 #Captive Portal Tests
 
@@ -255,6 +258,8 @@ gsp1.apple.com
 www.apple.com 
 www.appleiphonecell.com
 
+
+
 #NVIDIA GeForce Experience
 gfwsl.geforce.com
 
@@ -267,7 +272,7 @@ v.w-x.co
 #Mozilla Firefox Tracking Protection
 tracking-protection.cdn.mozilla.net
 
-#Canon Printers
+#Cannon Printers
 gdlp01.c-wss.com
 
 #Reddit
@@ -290,6 +295,7 @@ tracking.dpd.de
 wa.me
 @@/REGEX/^whatsapp-cdn-shv-[0-9]{2}-[a-z]{3}[0-9]\.fbcdn\.net$
 @@/REGEX/^((www|(w[0-9]\.)?web|media((-[a-z]{3}|\.[a-z]{4})[0-9]{1,2}-[0-9](\.|-)(cdn|fna))?)\.)?whatsapp\.(com|net)$
+
 www/wa/me
 
 #Signal
