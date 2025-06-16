@@ -36,12 +36,12 @@ dl.google.com
 #Android TV
 redirector.gvt1.com
 
-
+(\.|^)aria\.microsoft\.com$
 # ---- Outlook & Email ----
 outlook.office.com                         # Outlook web access
-*.outlook.office.com                       # Includes mail, calendar, etc.
+(\.|^).outlook\.office\.com$                       # Includes mail, calendar, etc.
 outlook.office365.com                      # Legacy Outlook 365 domain
-*.outlook.com                              # General Outlook subdomains
+(\.|^).outlook\.com$                              # General Outlook subdomains
 smtp.office365.com                         # SMTP email sending
 r1.res.office365.com                       # Rendering/static resources
 r3.res.office365.com
@@ -49,16 +49,16 @@ r4.res.office365.com
 attachments.office.net                     # Outlook attachment viewer
 
 # ---- Email Protection & Filtering ----
-*.protection.outlook.com                   # Email threat protection
-*.mail.protection.outlook.com              # Exchange Online Protection
+(\.|^)protection\.outlook\.com$                   # Email threat protection
+(\.|^)mail\.protection\.outlook\.com$              # Exchange Online Protection
 
 # ---- OneDrive Storage ----
 storage.live.com                           # Core OneDrive data
 admin.onedrive.com                         # Admin panel
-*.users.storage.live.com                   # User-specific OneDrive access
+users.storage.live.com                     # User-specific OneDrive access
 
 # ---- SharePoint Online ----
-*.sharepointonline.com                     # SharePoint site access
+(\.|^)sharepointonline\.com$                     # SharePoint site access
 cdn.sharepointonline.com                   # CDN for SharePoint
 privatecdn.sharepointonline.com
 publiccdn.sharepointonline.com
@@ -67,39 +67,39 @@ spoprod-a.akamaihd.net                     # Akamai CDN for SharePoint assets
 
 # ---- Teams & Skype for Business ----
 teams.microsoft.com                        # Microsoft Teams core
-*.teams.microsoft.com
-*.lync.com                                  # Legacy Skype for Business
+(\.|^)teams\.microsoft\.com$
+(\.|^)lync\.com$                            # Legacy Skype for Business
 broadcast.skype.com                        # Live video broadcast
-*.broadcast.skype.com
-*.sfbassets.com
-*.urlp.sfbassets.com
-*.skype.com                                 # Skype services
-*.skypeforbusiness.com
-s.gateway.messenger.live.com               # Skype messaging
-client-s.gateway.messenger.live.com
-ui.skype.com
-pricelist.skype.com
-apps.skype.com
-m.hotmail.com
+(\.|^)broadcast\.skype\.com$
+(\.|^)sfbassets\.com$
+(\.|^)urlp\.sfbassets\.com$
+(\.|^)skype\.com$                                 # Skype services
+(\.|^)skypeforbusiness\.com$
+(\.|^)gateway\.messenger\.live\.com$
+(\.|^)client-s\.gateway\.messenger\.live\.com$
+(\.|^)ui\.skype\.com$
+(\.|^)pricelist\.skype\.com$
+(\.|^)apps\.skype\.com$
+(\.|^)m\.hotmail\.com$
 
 # ---- Streaming & Video ----
-*.keydelivery.mediaservices.windows.net    # DRM services
-*.msecnd.net                                # Microsoft CDN
-*.streaming.mediaservices.windows.net
-*.api.microsoftstream.com
-*.notification.api.microsoftstream.com
-api.microsoftstream.com
-web.microsoftstream.com
-*.azureedge.net
-*.media.azure.net
+(\.|^)keydelivery\.mediaservices\.windows\.net$    # DRM services
+(\.|^)msecnd\.net$                                # Microsoft CDN
+(\.|^)streaming\.mediaservices\.windows\.net$
+(\.|^)api\.microsoftstream\.com$
+(\.|^)notification\.api\.microsoftstream\.com$
+(\.|^)microsoftstream\.com$
+(\.|^)web\.microsoftstream\.com$
+(\.|^)azureedge\.net$
+(\.|^)media\.azure\.net$
 
 # ---- Office Web Apps ----
-*.officeapps.live.com                      # Excel, Word, PowerPoint Online
-*.online.office.com
+(\.|^)office\.com$                                # All Office.com subdomains (Excel, Word, PowerPoint Online, etc)
+(\.|^)online\.office\.com$
 office.live.com
-*.onenote.com
-*.office.net
-*cdn.onenote.net
+(\.|^)onenote\.com$
+(\.|^)office\.net$
+(\.|^)cdn\.onenote\.net$
 products.office.com
 officeclient.microsoft.com
 
@@ -108,14 +108,14 @@ ajax.aspnetcdn.com                         # Microsoft ASP.NET CDN
 mlccdn.blob.core.windows.net
 aka.ms                                      # Microsoft short links
 amp.azure.net
-*.msedge.net
+(\.|^)msedge\.net$
 compass-ssl.microsoft.com
 c.s-microsoft.com
 i.s-microsoft.com
 
 # ---- Identity & Authentication ----
-*.msftidentity.com
-*.msidentity.com
+(\.|^)msftidentity\.com$
+(\.|^)msidentity\.com$
 account.activedirectory.windowsazure.com
 accounts.accesscontrol.windows.net
 login.microsoftonline.com                  # Core login domain
@@ -142,9 +142,9 @@ device.login.microsoftonline.com
 nexus.microsoftonline-p.com
 
 # ---- Admin & Security Portals ----
-*.manage.office.com
-*.protection.office.com
-*.portal.cloudappsecurity.com
+@@/REGEX/(\.|^)manage\.office\.com$
+@@/REGEX/(\.|^)protection\.office\.com$
+@@/REGEX/(\.|^)portal\.cloudappsecurity\.com$
 manage.office.com
 protection.office.com
 
